@@ -50,9 +50,7 @@ pub fn decode_value<
 
         let bit: T = decode_bit(on, off)?;
 
-        if bit == 1.into() {
-            value = value | bit << (bits - 1 - index);
-        }
+        value = value | bit << (bits - 1 - index);
 
         index += 1;
     }
